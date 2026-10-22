@@ -1,23 +1,68 @@
 aid: bega-cheese
+
 name: Bega Cheese
-description: 'Bega Cheese is a company surfaced via the API Evangelist harvest backlog (source: australia-apidays-2026)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Bega Cheese Limited (ASX: BGA) is an Australian food company headquartered at 23-45 Ridge St, North Bega, New South Wales, with roots in the Bega Co-operative Creamery Company formed by local dairy farmers in 1899. It receives, processes, manufactures and distributes dairy and other food products through Branded and Bulk segments, with brands including Bega, Vegemite, Bega Peanut Butter, Dairy Farmers, Big M, Dare Iced Coffee and Zooper Dooper. No public developer API or developer portal was found during profiling.'
+
 url: https://raw.githubusercontent.com/api-evangelist/bega-cheese/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:australia-apidays-2026
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
 tags:
 - Company
-apis: []
+- Food
+- Dairy
+- Consumer Goods
+- Manufacturing
+- Australia
+- ASX Listed
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/bega-cheese-hosts.yml
+- type: DomainSecurity
+  url: security/bega-cheese-domain-security.yml
 - type: Website
-  url: https://begacheese.com.au/
+  url: https://www.begacheese.com.au/
+
+apis: []
+
+x-coverage:
+  state: blocked
+  reason: geo-blocked
+  detail: The company's own hosts (begacheese.com.au, www.begacheese.com.au, bega.com.au) refused HTTPS connections from the probe location (TCP 443 closed, status 000); http://bega.com.au/ answered 301 to http://www.begacheese.com.au/, and third-party directories (yumda.com) list https://www.begacheese.com.au/ as the company website. No site pages could be read, so no link-property pointers were added; re-queue from an Australian vantage point.
+  evidence:
+  - url: https://begacheese.com.au/
+    status: 0
+  - url: https://www.begacheese.com.au/
+    status: 0
+  - url: https://bega.com.au/
+    status: 0
+  - url: http://bega.com.au/
+    status: 301
+  - url: https://www.yumda.com/en/companies/1042178/
+    status: 200
+  checked: '2026-10-21'
+x-enrichment:
+  date: '2026-10-21'
+  status: enriched
+  artifacts_added: 10
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

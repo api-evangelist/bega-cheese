@@ -1,0 +1,6 @@
+name: Bega Cheese rate limits
+generated: '2026-10-21'
+method: none
+limit_count: 0
+note: No public API or developer documentation found, so no rate limits are published. Company site refused HTTPS from the probe location (status 000).
+limits: []

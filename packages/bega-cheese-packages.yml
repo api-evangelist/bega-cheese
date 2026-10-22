@@ -1,0 +1,8 @@
+name: Bega Cheese packages
+generated: '2026-10-21'
+method: none
+note: No first-party SDK, CLI or client library found. npm registry search for "bega cheese" returned only unrelated packages; a web search for a Bega Cheese developer API/SDK/portal returned nothing; the company's own hosts refused HTTPS from the probe location (status 000), and no developer host is documented.
+checked:
+- https://registry.npmjs.org/-/v1/search?text=bega%20cheese&size=5
+- https://www.begacheese.com.au/
+packages: []
